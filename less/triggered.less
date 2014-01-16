@@ -2,8 +2,22 @@
     position:relative;
 }
 
+.triggered-icon-colors {
+    .icon {
+        padding:@item-padding;
+        color:@item-text-color;
+        background-color:@item-color;
+        &:hover {
+            color:@item-text-hover-color;
+            background-color:@item-hover-color;
+        }
+    }
+}
+
 .triggered-button-show {
     position:absolute;
+    text-decoration: none;
+    .triggered-icon-colors;
 }
 
 .triggered-button-hide {
@@ -11,6 +25,8 @@
     position:absolute;
     right:-(@icon-size/2);
     top:-(@icon-size/2);
+    text-decoration: none;
+    .triggered-icon-colors;
 }
 
 .triggered-hidden {
