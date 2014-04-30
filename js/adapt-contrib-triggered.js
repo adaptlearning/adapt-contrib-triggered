@@ -90,13 +90,13 @@ define(function(require) {
     }
 
     Adapt.on('componentView:preRender', function(view) {
-        if (view.model.get('_triggered')) {
-            view.model.set('_isVisible', false, {pluginName:'_triggered'});
+        if (view.model.get('_triggered') && view.model.get('_triggered')._isEnabled === true) {
+            view.model.set('_isVisible', false, {pluginName:'_triggered'}); 
         }
     });
 
     Adapt.on('componentView:postRender', function(componentView) {
-        if (componentView.model.get('_triggered')) {
+        if (componentView.model.get('_triggered') && componentView.model.get('_triggered')._isEnabled === true) {
             setupTriggeredViews(componentView);
         }
     });
