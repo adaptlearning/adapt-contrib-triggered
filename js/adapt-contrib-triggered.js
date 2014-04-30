@@ -30,8 +30,8 @@ define(function(require) {
                 var data = this.model.toJSON();
                 var template = Handlebars.templates['triggered-show-button'];
                 this.$el.html(template(data)).css({
-                    left:componentView.model.get('triggered').left + "%", 
-                    top:componentView.model.get('triggered').top + "%"
+                    left:componentView.model.get('_triggered')._left + "%", 
+                    top:componentView.model.get('_triggered')._top + "%"
                 }).appendTo(componentView.options.$parent.addClass('triggered-container'));
                 return this;
             },
@@ -43,7 +43,8 @@ define(function(require) {
 
                 $currentTarget.addClass('triggered-hidden');
                 
-                this.triggeredView.model.set('_isVisible', true);
+                this.triggeredView.model.set('_isVisible', true, {pluginName:'_triggered'});
+                console.log(this.triggeredView.model)
                 $('.' + currentTriggeredId).removeClass('triggered-hidden');
                 this.triggeredView.$el.data('inview', false);
                 $(window).scroll();
@@ -76,7 +77,7 @@ define(function(require) {
             hide: function(event) {
                 event.preventDefault();
                 var currentTriggeredId = $(event.currentTarget).attr('data-triggered-id');
-                this.model.set('_isVisible', false);
+                this.model.set('_isVisible', false, {pluginName:'_triggered'});
                 this.$el.addClass('triggered-hidden');
                 $('.triggered-button-show[data-triggered-id="'+currentTriggeredId+'"]').removeClass('triggered-hidden');
             }
@@ -89,13 +90,13 @@ define(function(require) {
     }
 
     Adapt.on('componentView:preRender', function(view) {
-        if (view.model.get('triggered')) {
-            view.model.set('_isVisible', false);
+        if (view.model.get('_triggered')) {
+            view.model.set('_isVisible', false, {pluginName:'_triggered'});
         }
     });
 
     Adapt.on('componentView:postRender', function(componentView) {
-        if (componentView.model.get('triggered')) {
+        if (componentView.model.get('_triggered')) {
             setupTriggeredViews(componentView);
         }
     });

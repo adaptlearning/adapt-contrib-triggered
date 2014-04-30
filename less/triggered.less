@@ -4,12 +4,14 @@
 
 .triggered-icon-colors {
     .icon {
-        padding:@item-padding;
-        color:@item-text-color;
-        background-color:@item-color;
-        &:hover {
-            color:@item-text-hover-color;
-            background-color:@item-hover-color;
+        padding:@button-padding;
+        color:@button-text-color;
+        background-color:@button-color;
+        .no-touch & {
+            &:hover {
+                color:@button-text-hover-color;
+                background-color:@button-hover-color;
+            }
         }
     }
 }
