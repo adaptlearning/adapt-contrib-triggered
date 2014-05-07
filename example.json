@@ -1,6 +1,8 @@
-"triggered": {
-	"top": 30,
-	"left": 30,
+// To be placed on a component
+"_triggered": {
+	"_isEnabled":true,
+	"_top": 30,
+	"_left": 30,
 	"showButtonText": "Click me to show",
 	"hideButtonText": "Click me to hide"
 }
