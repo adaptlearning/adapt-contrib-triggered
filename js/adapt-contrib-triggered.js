@@ -1,7 +1,7 @@
 /*
 * adapt-contrib-triggered
 * License - http://github.com/adaptlearning/adapt_framework/LICENSE
-* Maintainers - Daryl Hedley <darylhedley@hotmail.com>
+* Maintainers - Daryl Hedley <darylhedley@hotmail.com>, Dan Gray (dan@sinensis.co.uk)
 */
 define(function(require) {
 
@@ -76,7 +76,7 @@ define(function(require) {
 
             hide: function(event) {
                 event.preventDefault();
-                var currentTriggeredId = $(event.currentTarget).attr('data-triggered-id');
+                var currentTriggeredId = this.model.get('_id');
                 this.model.set('_isVisible', false, {pluginName:'_triggered'});
                 this.$el.addClass('triggered-hidden');
                 $('.triggered-button-show[data-triggered-id="'+currentTriggeredId+'"]').removeClass('triggered-hidden');
