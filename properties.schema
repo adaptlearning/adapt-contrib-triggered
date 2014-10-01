@@ -1,0 +1,67 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required":false,
+  "properties":{
+    "pluginLocations": {
+      "type":"object",
+      "required":true,
+      "properties":{
+        "config": {
+          "type":"object"
+        },
+        "course": {
+          "type":"object"
+        },
+        "contentobject": {
+          "type":"object"
+        },
+        "article": {
+          "type":"object"
+        },
+        "block": {
+          "type":"object"
+        },
+        "component": {
+          "type":"object",
+          "properties":{
+            "_triggered": {
+              "type":"object",
+              "required":false,
+              "properties":{
+                "_isEnabled": {
+                  "type":"boolean",
+                  "required":true,
+                  "title": "Enabled"
+                },
+                "_top": {
+                  "type":"number",
+                  "required":true,
+                  "title": "Trigger button top positioning"
+                },
+                "_left": {
+                  "type":"number",
+                  "required":true,
+                  "title": "Trigger button left positioning"
+                },
+                "showButtonText": {
+                  "type":"string",
+                  "required":true,
+                  "minLength": 1,
+                  "title": "Show text"
+                },
+                "hideButtonText": {
+                  "type":"string",
+                  "required":true,
+                  "minLength": 1,
+                  "title": "Hide text"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
