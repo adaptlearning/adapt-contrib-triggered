@@ -1,8 +1,3 @@
-/*
-* adapt-contrib-triggered
-* License - http://github.com/adaptlearning/adapt_framework/blob/master/LICENSE
-* Maintainers - Daryl Hedley <darylhedley@hotmail.com>, Dan Gray (dan@sinensis.co.uk)
-*/
 define(function(require) {
 
     var Adapt = require('coreJS/adapt');
