@@ -2,9 +2,7 @@
   "name": "adapt-contrib-triggered",
   "version": "0.0.1",
   "homepage": "https://github.com/adaptlearning/adapt-contrib-triggered",
-  "authors": [
-    "Daryl Hedley <darylhedley@hotmail.com>"
-  ],
+  "issues": "https://github.com/adaptlearning/adapt-contrib-triggered/issues",
   "displayName" : "Triggered",
   "extension" : "triggered",
   "description": "An extension that hides components that can be triggered by a button",
