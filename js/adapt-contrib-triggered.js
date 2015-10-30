@@ -1,8 +1,3 @@
-/*
-* adapt-contrib-triggered
-* License - http://github.com/adaptlearning/adapt_framework/LICENSE
-* Maintainers - Daryl Hedley <darylhedley@hotmail.com>
-*/
 define(function(require) {
 
     var Adapt = require('coreJS/adapt');
@@ -11,13 +6,13 @@ define(function(require) {
 
         var TriggeredShowView = Backbone.View.extend({
 
-            tagName: 'a',
+            tagName: 'button',
 
             className: 'triggered-button-show',
 
             initialize: function() {
                 this.listenTo(Adapt, 'remove', this.remove);
-                this.$el.attr('data-triggered-id', this.model.get('_id')).attr('href', '#');
+                this.$el.attr('data-triggered-id', this.model.get('_id'));
                 this.triggeredView = componentView;
                 this.render();
             },
@@ -29,10 +24,12 @@ define(function(require) {
             render: function() {
                 var data = this.model.toJSON();
                 var template = Handlebars.templates['triggered-show-button'];
+                var $container = $(".component-container", $("." + this.model.get("_parentId")));
+                $container.addClass('triggered-container');
                 this.$el.html(template(data)).css({
                     left:componentView.model.get('_triggered')._left + "%", 
                     top:componentView.model.get('_triggered')._top + "%"
-                }).appendTo(componentView.options.$parent.addClass('triggered-container'));
+                }).appendTo($container);
                 return this;
             },
 
@@ -48,6 +45,7 @@ define(function(require) {
                 $('.' + currentTriggeredId).removeClass('triggered-hidden');
                 this.triggeredView.$el.data('inview', false);
                 $(window).scroll();
+                this.triggeredView.$el.a11y_focus();
             }
 
         });
@@ -76,10 +74,10 @@ define(function(require) {
 
             hide: function(event) {
                 event.preventDefault();
-                var currentTriggeredId = $(event.currentTarget).attr('data-triggered-id');
+                var currentTriggeredId = this.model.get('_id');
                 this.model.set('_isVisible', false, {pluginName:'_triggered'});
                 this.$el.addClass('triggered-hidden');
-                $('.triggered-button-show[data-triggered-id="'+currentTriggeredId+'"]').removeClass('triggered-hidden');
+                $('.triggered-button-show[data-triggered-id="'+currentTriggeredId+'"]').removeClass('triggered-hidden').a11y_focus();
             }
 
         });

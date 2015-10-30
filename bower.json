@@ -2,14 +2,15 @@
   "name": "adapt-contrib-triggered",
   "version": "0.0.1",
   "homepage": "https://github.com/adaptlearning/adapt-contrib-triggered",
-  "authors": [
-    "Daryl Hedley <darylhedley@hotmail.com>"
-  ],
-  "description": "An extension that hides components that can be triggered/shown by clicking on a button",
+  "issues": "https://github.com/adaptlearning/adapt-contrib-triggered/issues",
+  "displayName" : "Triggered",
+  "extension" : "triggered",
+  "description": "An extension that hides components that can be triggered by a button",
   "main": "/js/adapt-contrib-triggered.js",
   "keywords": [
     "adapt-plugin",
     "adapt-extension"
   ],
-  "license": "GPLv3"
+  "license": "GPLv3",
+  "targetAttribute": "_triggered"
 }
