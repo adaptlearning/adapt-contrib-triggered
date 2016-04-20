@@ -1,61 +1,80 @@
 {
-  "type":"object",
+  "type": "object",
   "$schema": "http://json-schema.org/draft-04/schema",
   "id": "http://jsonschema.net",
-  "required":false,
-  "properties":{
+  "required": false,
+  "properties": {
     "pluginLocations": {
-      "type":"object",
-      "required":true,
-      "properties":{
+      "type": "object",
+      "required": true,
+      "properties": {
         "config": {
-          "type":"object"
+          "type": "object"
         },
         "course": {
-          "type":"object"
+          "type": "object"
         },
         "contentobject": {
-          "type":"object"
+          "type": "object"
         },
         "article": {
-          "type":"object"
+          "type": "object"
         },
         "block": {
-          "type":"object"
+          "type": "object"
         },
         "component": {
-          "type":"object",
-          "properties":{
+          "type": "object",
+          "properties": {
             "_triggered": {
-              "type":"object",
-              "required":false,
-              "properties":{
+              "type": "object",
+              "required": false,
+              "legend": "Triggered",
+              "properties": {
                 "_isEnabled": {
-                  "type":"boolean",
-                  "required":true,
-                  "title": "Enabled"
+                  "type": "boolean",
+                  "required": true,
+                  "default": true,
+                  "title": "Is enabled",
+                  "inputType": {"type": "Boolean", "options": [true, false]},
+                  "validators": [],
+                  "help": "If set to 'true', this component can be tiggered by a button."
                 },
                 "_top": {
-                  "type":"number",
-                  "required":true,
-                  "title": "Trigger button top positioning"
+                  "type": "number",
+                  "required": true,
+                  "default": 0,
+                  "title": "Trigger Show Button Position - Top",
+                  "inputType": "Number",
+                  "validators": ["required", "number"],
+                  "help": "Top position of Trigger show button."
                 },
                 "_left": {
-                  "type":"number",
-                  "required":true,
-                  "title": "Trigger button left positioning"
+                  "type": "number",
+                  "required": true,
+                  "default": 0,
+                  "title": "Trigger Show Button Position - Left",
+                  "inputType": "Number",
+                  "validators": ["required", "number"],
+                  "help": "Left position of Trigger show button."
                 },
                 "showButtonText": {
-                  "type":"string",
-                  "required":true,
-                  "minLength": 1,
-                  "title": "Show text"
+                  "type": "string",
+                  "required": false,
+                  "default": "",
+                  "title": "Show Button text",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": ""
                 },
                 "hideButtonText": {
-                  "type":"string",
-                  "required":true,
-                  "minLength": 1,
-                  "title": "Hide text"
+                  "type": "string",
+                  "required": false,
+                  "default": "",
+                  "title": "Hide Button text",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": ""
                 }
               }
             }

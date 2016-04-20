@@ -1,6 +1,6 @@
-define(function(require) {
-
-    var Adapt = require('coreJS/adapt');
+define([
+  'coreJS/adapt'
+], function(Adapt) {
 
     function setupTriggeredViews(componentView) {
 
@@ -27,21 +27,20 @@ define(function(require) {
                 var $container = $(".component-container", $("." + this.model.get("_parentId")));
                 $container.addClass('triggered-container');
                 this.$el.html(template(data)).css({
-                    left:componentView.model.get('_triggered')._left + "%", 
+                    left:componentView.model.get('_triggered')._left + "%",
                     top:componentView.model.get('_triggered')._top + "%"
                 }).appendTo($container);
                 return this;
             },
 
             show: function(event) {
-                event.preventDefault();
+                event && event.preventDefault();
                 var $currentTarget = $(event.currentTarget);
                 var currentTriggeredId = $currentTarget.attr('data-triggered-id');
 
                 $currentTarget.addClass('triggered-hidden');
-                
+
                 this.triggeredView.model.set('_isVisible', true, {pluginName:'_triggered'});
-                console.log(this.triggeredView.model)
                 $('.' + currentTriggeredId).removeClass('triggered-hidden');
                 this.triggeredView.$el.data('inview', false);
                 $(window).scroll();
@@ -73,7 +72,7 @@ define(function(require) {
             },
 
             hide: function(event) {
-                event.preventDefault();
+                event && event.preventDefault();
                 var currentTriggeredId = this.model.get('_id');
                 this.model.set('_isVisible', false, {pluginName:'_triggered'});
                 this.$el.addClass('triggered-hidden');
@@ -89,7 +88,7 @@ define(function(require) {
 
     Adapt.on('componentView:preRender', function(view) {
         if (view.model.get('_triggered') && view.model.get('_triggered')._isEnabled === true) {
-            view.model.set('_isVisible', false, {pluginName:'_triggered'}); 
+            view.model.set('_isVisible', false, {pluginName:'_triggered'});
         }
     });
 
