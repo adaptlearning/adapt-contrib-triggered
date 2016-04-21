@@ -5,21 +5,22 @@ An extension that hides components that can be triggered by a button.
 
 ## Installation
 * If **Triggered** has been uninstalled from the Adapt framework, it may be reinstalled.
-With the [Adapt CLI](https://github.com/adaptlearning/adapt-cli) installed, run the following from the command line:
+With the [Adapt CLI](https://github.com/adaptlearning/adapt-cli) installed, run the following from the command line:  
     `adapt install adapt-contrib-triggered`
 
-    Alternatively, this component can also be installed by adding the following line of code to the *adapt.json* file:
-    `"adapt-contrib-triggered": "*"`
-    Then running the command:
-    `adapt install`
-    (This second method will reinstall all plug-ins listed in *adapt.json*.)
+    Alternatively, this component can also be installed by adding the following line of code to the *adapt.json* file:  
+    `"adapt-contrib-triggered": "*"`  
+    Then running the command:  
+    `adapt install`  
+    (This second method will reinstall all plug-ins listed in *adapt.json*.)  
 
-* If **Triggered** has been uninstalled from the Adapt authoring tool, it may be reinstalled using the [Plug-in Manager](https://github.com/adaptlearning/adapt_authoring/wiki/Plugin-Manager).
+* If **Triggered** has been uninstalled from the Adapt authoring tool, it may be reinstalled using the [Plug-in Manager](https://github.com/adaptlearning/adapt_authoring/wiki/Plugin-Manager).  
+
 <div float align=right><a href="#top">Back to Top</a></div>
 
 ## Settings overview
 
-A complete example of this components settings can be found in the [example.json](https://github.com/adaptlearning/adapt-contrib-triggered/blob/master/example.json) file.
+The attributes listed below are used in *components.json* to configure **Triggered**, and are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-contrib-triggered/blob/master/example.json). The absence of the **_triggered** object in a component model is interpreted as having **Triggered** disabled (`"_isEnabled": false`).
 
 ### Attributes
 
