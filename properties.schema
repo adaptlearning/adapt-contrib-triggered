@@ -34,11 +34,11 @@
                 "_isEnabled": {
                   "type": "boolean",
                   "required": true,
-                  "default": true,
+                  "default": false,
                   "title": "Is enabled",
                   "inputType": {"type": "Boolean", "options": [true, false]},
                   "validators": [],
-                  "help": "If set to 'true', this component can be tiggered by a button."
+                  "help": "If set to 'true', this component can be triggered by a button."
                 },
                 "_top": {
                   "type": "number",
