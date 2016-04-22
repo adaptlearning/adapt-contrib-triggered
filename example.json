@@ -1,3 +1,15 @@
+// To go on a course
+{
+    "_id": "course",
+    "_type": "course",
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_triggered": {
+        "_isEnabled": true
+    }
+}
+
 // To be placed on a component
 {
     "_id":"c-05",

@@ -86,16 +86,28 @@ define([
 
     }
 
-    Adapt.on('componentView:preRender', function(view) {
+    function onComponentViewPreRender(view) {
         if (view.model.get('_triggered') && view.model.get('_triggered')._isEnabled === true) {
             view.model.set('_isVisible', false, {pluginName:'_triggered'});
         }
-    });
+    }
 
-    Adapt.on('componentView:postRender', function(componentView) {
+    function onComponentViewPostRender(componentView) {
         if (componentView.model.get('_triggered') && componentView.model.get('_triggered')._isEnabled === true) {
             setupTriggeredViews(componentView);
         }
-    });
+    }
+
+    function onDataReady() {
+        // do not proceed until triggered enabled on course.json
+        if (!Adapt.course.get('_triggered') || !Adapt.course.get('_triggered')._isEnabled) {
+            return;
+        }
+
+        Adapt.on('componentView:preRender', onComponentViewPreRender);
+        Adapt.on('componentView:postRender', onComponentViewPostRender);
+    }
+
+    Adapt.once('app:dataReady', onDataReady);
 
 });

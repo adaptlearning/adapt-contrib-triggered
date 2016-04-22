@@ -12,7 +12,25 @@
           "type": "object"
         },
         "course": {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "_triggered": {
+              "type": "object",
+              "required": false,
+              "legend": "Triggered",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "required": true,
+                  "default": true,
+                  "title": "Is enabled",
+                  "inputType": {"type": "Boolean", "options": [true, false]},
+                  "validators": [],
+                  "help": "If set to 'false', Triggered will be disabled on all components."
+                }
+              }
+            }
+          }
         },
         "contentobject": {
           "type": "object"

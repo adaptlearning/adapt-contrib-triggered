@@ -22,6 +22,11 @@ With the [Adapt CLI](https://github.com/adaptlearning/adapt-cli) installed, run 
 
 The attributes listed below are used in *components.json* to configure **Triggered**, and are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-contrib-triggered/blob/master/example.json). The absence of the **_triggered** object in a component model is interpreted as having **Triggered** disabled (`"_isEnabled": false`).
 
+The same **_triggered** object may be added to the course (*course.json*). At this level, `"_isEnabled"` can be used to disable **Triggered** on components that have `"_isEnabled": true`.  
+>**Note:** Setting the **_triggered** object in *course.json* does not provide defaults for components. It cannot be used to enable **Triggered** on components that have `"_isEnabled": false` or that do not have the **_triggered** object in their model json.
+
+Visit the [**Triggered** wiki](https://github.com/adaptlearning/adapt-contrib-triggered/wiki) for more information about how they appear in the [authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki). 
+
 ### Attributes
 
 **_triggered** (object): The Triggered object that contains values for **_isEnabled**, **_top**, **_left**, **showButtonText**, and **hideButtonText**.
@@ -36,9 +41,11 @@ The attributes listed below are used in *components.json* to configure **Trigger
 
 >**hideButtonText** (string): Hide button text.
 
+<div float align=right><a href="#top">Back to Top</a></div>
+
 ## Limitations
 
-To be completed
+No known limitations.
 
 ## Browser spec
 
