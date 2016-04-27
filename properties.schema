@@ -58,41 +58,73 @@
                   "validators": [],
                   "help": "If set to 'true', this component can be triggered by a button."
                 },
-                "_top": {
-                  "type": "number",
-                  "required": true,
-                  "default": 0,
-                  "title": "Trigger Show Button Position - Top",
-                  "inputType": "Number",
-                  "validators": ["required", "number"],
-                  "help": "Top position of Trigger show button."
+                "showButton": {
+                  "type":"object",
+                  "required":true,
+                  "title": "Show Button",
+                  "properties":{
+                    "_top": {
+                      "type": "number",
+                      "required": true,
+                      "default": 0,
+                      "title": "Trigger Show Button Position - Top",
+                      "inputType": "Number",
+                      "validators": ["required", "number"],
+                      "help": "Top position of Trigger show button."
+                    },
+                    "_left": {
+                      "type": "number",
+                      "required": true,
+                      "default": 0,
+                      "title": "Trigger Show Button Position - Left",
+                      "inputType": "Number",
+                      "validators": ["required", "number"],
+                      "help": "Left position of Trigger show button."
+                    },
+                    "buttonText": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "title": "Show Button text",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": ""
+                    }
+                  }
                 },
-                "_left": {
-                  "type": "number",
-                  "required": true,
-                  "default": 0,
-                  "title": "Trigger Show Button Position - Left",
-                  "inputType": "Number",
-                  "validators": ["required", "number"],
-                  "help": "Left position of Trigger show button."
-                },
-                "showButtonText": {
-                  "type": "string",
-                  "required": false,
-                  "default": "",
-                  "title": "Show Button text",
-                  "inputType": "Text",
-                  "validators": [],
-                  "help": ""
-                },
-                "hideButtonText": {
-                  "type": "string",
-                  "required": false,
-                  "default": "",
-                  "title": "Hide Button text",
-                  "inputType": "Text",
-                  "validators": [],
-                  "help": ""
+                "hideButton": {
+                  "type":"object",
+                  "required":true,
+                  "title": "Hide Button",
+                  "properties":{
+                    "_top": {
+                      "type": "number",
+                      "required": true,
+                      "default": 0,
+                      "title": "Trigger Hide Button Position - Top",
+                      "inputType": "Number",
+                      "validators": ["required", "number"],
+                      "help": "Top position of Trigger hide button."
+                    },
+                    "_left": {
+                      "type": "number",
+                      "required": true,
+                      "default": 0,
+                      "title": "Trigger Hide Button Position - Left",
+                      "inputType": "Number",
+                      "validators": ["required", "number"],
+                      "help": "Left position of Trigger hide button."
+                    },
+                    "buttonText": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "title": "Hide Button text",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": ""
+                    }
+                  }
                 }
               }
             }
