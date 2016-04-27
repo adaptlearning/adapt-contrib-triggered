@@ -27,8 +27,8 @@ define([
                 var $container = $(".component-container", $("." + this.model.get("_parentId")));
                 $container.addClass('triggered-container');
                 this.$el.html(template(data)).css({
-                    left:componentView.model.get('_triggered')._left + "%",
-                    top:componentView.model.get('_triggered')._top + "%"
+                    left:componentView.model.get('_triggered').showButton._left + "%",
+                    top:componentView.model.get('_triggered').showButton._top + "%"
                 }).appendTo($container);
                 return this;
             },

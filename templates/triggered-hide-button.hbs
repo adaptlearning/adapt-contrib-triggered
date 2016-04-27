@@ -1,6 +1,6 @@
-<button role="button" tabindex="0" class='triggered-button-hide' data-triggered-id="{{_id}}">
-    {{#if _triggered.hideButtonText}}
-    <span>{{{_triggered.hideButtonText}}}</span>
+<button tabindex="0" class='triggered-button-hide' data-triggered-id="{{_id}}" style="top:{{_triggered.hideButton._top}}%; left:{{_triggered.hideButton._left}}%;">
+    {{#if _triggered.hideButton.buttonText}}
+    <span>{{{_triggered.hideButton.buttonText}}}</span>
     {{else}}
     <span class='icon icon-cross'></span>
     {{/if}}
