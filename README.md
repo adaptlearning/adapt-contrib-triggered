@@ -33,25 +33,25 @@ Visit the [**Triggered** wiki](https://github.com/adaptlearning/adapt-contrib-tr
 
 >**_isEnabled** (boolean): Enables/disables the **Triggered** extension.
 
->**showButton** (object): This object contains values for **_top**, **_right_**, **_bottom_**, **_left** and **buttonText**.
+>**showButton** (object): This object contains values for **_top**, **_right**, **_bottom**, **_left** and **buttonText**.
 
 >>**_top** (string): Top position of Triggered show button.
 
 >>**_right** (string): Top position of Triggered show button.
 
->>**_bottom_** (string): Left position of Triggered show button.
+>>**_bottom** (string): Left position of Triggered show button.
 
 >>**_left** (string): Left position of Triggered show button.
 
 >>**buttonText** (string): Show button text.
 
->**hideButton** (object): This object contains values for **_top**, **_right_**, **_bottom_**, **_left** and **buttonText**.
+>**hideButton** (object): This object contains values for **_top**, **_right**, **_bottom**, **_left** and **buttonText**.
 
 >>**_top** (string): Top position of Triggered hide button.
 
 >>**_right** (string): Top position of Triggered hide button.
 
->>**_bottom_** (string): Left position of Triggered hide button.
+>>**_bottom** (string): Left position of Triggered hide button.
 
 >>**_left** (string): Left position of Triggered hide button.
 
