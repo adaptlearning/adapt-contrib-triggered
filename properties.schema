@@ -65,38 +65,38 @@
                   "properties":{
                     "_top": {
                       "type": "string",
-                      "required": false,
+                      "required": true,
                       "default": "auto",
                       "title": "Trigger Show Button Position - Top",
                       "inputType": "Text",
-                      "validators": [],
+                      "validators": ["required"],
                       "help": "Top position of Trigger show button."
                     },
                     "_right": {
                       "type": "string",
-                      "required": false,
+                      "required": true,
                       "default": "auto",
                       "title": "Trigger Show Button Position - Right",
                       "inputType": "Text",
-                      "validators": [],
+                      "validators": ["required"],
                       "help": "Right position of Trigger show button."
                     },
                     "_bottom": {
                       "type": "string",
-                      "required": false,
+                      "required": true,
                       "default": "auto",
                       "title": "Trigger Show Button Position - Bottom",
                       "inputType": "Text",
-                      "validators": [],
+                      "validators": ["required"],
                       "help": "Bottom position of Trigger show button."
                     },
                     "_left": {
                       "type": "string",
-                      "required": false,
+                      "required": true,
                       "default": "auto",
                       "title": "Trigger Show Button Position - Left",
                       "inputType": "Text",
-                      "validators": [],
+                      "validators": ["required"],
                       "help": "Left position of Trigger show button."
                     },
                     "buttonText": {
@@ -117,38 +117,38 @@
                   "properties":{
                     "_top": {
                       "type": "string",
-                      "required": false,
+                      "required": true,
                       "default": "auto",
                       "title": "Trigger Hide Button Position - Top",
                       "inputType": "Text",
-                      "validators": [],
+                      "validators": ["required"],
                       "help": "Top position of Trigger hide button."
                     },
                     "_right": {
                       "type": "string",
-                      "required": false,
+                      "required": true,
                       "default": "auto",
                       "title": "Trigger Hide Button Position - Right",
                       "inputType": "Text",
-                      "validators": [],
+                      "validators": ["required"],
                       "help": "Right position of Trigger hide button."
                     },
                     "_bottom": {
                       "type": "string",
-                      "required": false,
+                      "required": true,
                       "default": "auto",
                       "title": "Trigger Hide Button Position - Bottom",
                       "inputType": "Text",
-                      "validators": [],
+                      "validators": ["required"],
                       "help": "Bottom position of Trigger hide button."
                     },
                     "_left": {
                       "type": "string",
-                      "required": false,
+                      "required": true,
                       "default": "auto",
                       "title": "Trigger Hide Button Position - Left",
                       "inputType": "Text",
-                      "validators": [],
+                      "validators": ["required"],
                       "help": "Left position of Trigger hide button."
                     },
                     "buttonText": {
