@@ -4,10 +4,11 @@
   "framework": "^2.0.0",
   "homepage": "https://github.com/adaptlearning/adapt-contrib-triggered",
   "issues": "https://github.com/adaptlearning/adapt-contrib-triggered/issues",
-  "displayName" : "Triggered",
-  "extension" : "triggered",
+  "repository": "git@github.com:adaptlearning/adapt-contrib-triggered.git",
   "description": "An extension that hides components that can be triggered by a button",
   "main": "/js/adapt-contrib-triggered.js",
+  "displayName" : "Triggered",
+  "extension" : "triggered",
   "keywords": [
     "adapt-plugin",
     "adapt-extension"
