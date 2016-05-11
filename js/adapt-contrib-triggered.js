@@ -8,11 +8,14 @@ define([
 
             tagName: 'button',
 
-            className: 'triggered-button-show',
+            className: 'base triggered-button-show',
 
             initialize: function() {
                 this.listenTo(Adapt, 'remove', this.remove);
-                this.$el.attr('data-triggered-id', this.model.get('_id'));
+                this.$el.attr({
+                    'data-triggered-id': this.model.get('_id'),
+                    'tabindex': 0
+                });
                 this.triggeredView = componentView;
                 this.render();
             },
@@ -26,9 +29,13 @@ define([
                 var template = Handlebars.templates['triggered-show-button'];
                 var $container = $(".component-container", $("." + this.model.get("_parentId")));
                 $container.addClass('triggered-container');
+
+                var showButton = this.triggeredView.model.get('_triggered').showButton;
                 this.$el.html(template(data)).css({
-                    left:componentView.model.get('_triggered').showButton._left + "%",
-                    top:componentView.model.get('_triggered').showButton._top + "%"
+                    top:showButton._top,
+                    right: showButton._right,
+                    bottom: showButton._bottom,
+                    left:showButton._left,
                 }).appendTo($container);
                 return this;
             },

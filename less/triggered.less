@@ -1,32 +1,33 @@
-.triggered-component, .triggered-container {
-    position:relative;
-}
+ .triggered-container {
+    position: relative;
 
-.triggered-icon-colors {
-    .icon {
-        padding:@button-padding;
-        color:@button-text-color;
-        background-color:@button-color;
-        .no-touch & {
-            &:hover {
-                color:@button-text-hover-color;
-                background-color:@button-hover-color;
+    .triggered-icon-colors {
+        .icon, .triggered-button-text {
+            padding: @button-padding;
+            color: @button-text-color;
+            background-color: @button-color;
+
+            .no-touch &:hover {
+                color: @button-text-color-hover;
+                background-color: @button-color-hover;
             }
         }
     }
-}
 
-.triggered-button-show {
-    position:absolute;
-    text-decoration: none;
-    .triggered-icon-colors;
-}
+    .triggered-component {
+        position: relative;
 
-.triggered-button-hide {
-    display:block;
-    position:absolute;
-    text-decoration: none;
-    .triggered-icon-colors;
+        .triggered-button-hide {
+            display: block;
+            position: absolute;
+            .triggered-icon-colors;
+        }
+    }
+
+    .triggered-button-show {
+        position: absolute;
+        .triggered-icon-colors;
+    }
 }
 
 .triggered-hidden {

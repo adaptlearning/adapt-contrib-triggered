@@ -23,13 +23,17 @@
     "_triggered": {
         "_isEnabled": true,
         "showButton": {
-            "_top": 30,
-            "_left": 30,
+            "_top": "40%",
+            "_left": "15%",
+            "_right": "auto",
+            "_bottom": "auto",
             "buttonText": "Click me to show"
         },
         "hideButton": {
-            "_top": -10,
-            "_left": 60,
+            "_top": "-2%",
+            "_left": "auto",
+            "_right": "0%",
+            "_bottom": "auto",
             "buttonText": "Click me to hide"
         }
     }
