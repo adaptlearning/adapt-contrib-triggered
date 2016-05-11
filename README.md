@@ -37,9 +37,9 @@ Visit the [**Triggered** wiki](https://github.com/adaptlearning/adapt-contrib-tr
 
 >>**_top** (string): Top position of Triggered show button.
 
->>**_right** (string): Top position of Triggered show button.
+>>**_right** (string): Right position of Triggered show button.
 
->>**_bottom** (string): Left position of Triggered show button.
+>>**_bottom** (string): Bottom position of Triggered show button.
 
 >>**_left** (string): Left position of Triggered show button.
 
@@ -49,9 +49,9 @@ Visit the [**Triggered** wiki](https://github.com/adaptlearning/adapt-contrib-tr
 
 >>**_top** (string): Top position of Triggered hide button.
 
->>**_right** (string): Top position of Triggered hide button.
+>>**_right** (string): Right position of Triggered hide button.
 
->>**_bottom** (string): Left position of Triggered hide button.
+>>**_bottom** (string): Bottom position of Triggered hide button.
 
 >>**_left** (string): Left position of Triggered hide button.
 
