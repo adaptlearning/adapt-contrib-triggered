@@ -19,6 +19,7 @@ class Triggered extends Backbone.Controller {
   }
 
   onComponentViewPostRender(componentView) {
+    if (!componentView.model.get('_triggered')._isEnabled) return;
     new TriggeredView({ componentView });
   }
 }
