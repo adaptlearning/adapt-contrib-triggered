@@ -1,36 +1,14 @@
- .triggered-container {
-    position: relative;
+.triggered__container {
+  position: relative;
+  width: 100%;
 
-    .triggered-icon-colors {
-        .icon, .triggered-button-text {
-            padding: @button-padding;
-            color: @button-text-color;
-            background-color: @button-color;
-
-            .no-touch &:hover {
-                color: @button-text-color-hover;
-                background-color: @button-color-hover;
-            }
-        }
-    }
-
-    .triggered-component {
-        position: relative;
-
-        .triggered-button-hide {
-            display: block;
-            position: absolute;
-            .triggered-icon-colors;
-        }
-    }
-
-    .triggered-button-show {
-        position: absolute;
-        .triggered-icon-colors;
-    }
+  .triggered__button-hide,
+  .triggered__button-show {
+    position: absolute;
+  }
 }
 
-.triggered-hidden {
-    visibility: hidden;
-    display: none;
+.triggered__hidden .component__inner {
+  visibility: hidden;
+  display: none;
 }

@@ -1,0 +1,15 @@
+<button class="btn-text triggered__button-show" data-triggered-id="{{_id}}" style="top:{{_triggered.showButton._top}}; right:{{_triggered.showButton._right}}; bottom:{{_triggered.showButton._bottom}}; left:{{_triggered.showButton._left}};">
+     {{#if _triggered.showButton.buttonText}}
+        <div class="triggered__button-text">{{{_triggered.showButton.buttonText}}}</div>
+    {{else}}
+        <span class="icon icon-plus"></span>
+    {{/if}}
+</button>
+
+<button class='btn-text triggered__button-hide u-display-none' data-triggered-id="{{_id}}" style="top:{{_triggered.hideButton._top}}; right:{{_triggered.hideButton._right}}; bottom:{{_triggered.hideButton._bottom}}; left:{{_triggered.hideButton._left}};">
+    {{#if _triggered.hideButton.buttonText}}
+        <div class="triggered__button-text">{{{_triggered.hideButton.buttonText}}}</div>
+    {{else}}
+        <span class='icon icon-cross'></span>
+    {{/if}}
+</button>
