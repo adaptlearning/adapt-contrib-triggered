@@ -8,7 +8,7 @@ class Triggered extends Backbone.Controller {
   }
 
   onDataReady() {
-    if (!Adapt.course.get('_triggered') || !Adapt.course.get('_triggered')._isEnabled) {
+    if (!Adapt.course.get('_triggered')?._isEnabled) {
       return;
     }
 
