@@ -1,7 +1,7 @@
 {
   "name": "adapt-contrib-triggered",
   "version": "2.2.0",
-  "framework": "^2.0.0",
+  "framework": "^5.8.0",
   "homepage": "https://github.com/adaptlearning/adapt-contrib-triggered",
   "issues": "https://github.com/adaptlearning/adapt-contrib-triggered/issues",
   "repository": "git@github.com/adaptlearning/adapt-contrib-triggered.git",
