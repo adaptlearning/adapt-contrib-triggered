@@ -1,4 +1,5 @@
 import Adapt from 'coreJS/adapt';
+import a11y from 'core/js/a11y';
 
 export default class TriggeredView extends Backbone.View {
 
@@ -45,7 +46,7 @@ export default class TriggeredView extends Backbone.View {
       .removeClass('u-display-none');
     this.triggeredView.$el.data('inview', false);
     $(window).scroll();
-    Adapt.a11y.focusFirst(this.$el, { defer: true });
+    a11y.focusFirst(this.$el, { defer: true });
   }
 
   hide(event) {
@@ -58,6 +59,6 @@ export default class TriggeredView extends Backbone.View {
     $container.addClass('triggered__hidden');
     $(`.triggered__button-show[data-triggered-id='${currentTriggeredId}']`)
       .removeClass('u-display-none');
-    Adapt.a11y.focusFirst(this.$el, { defer: true });
+    a11y.focusFirst(this.$el, { defer: true });
   }
 }
